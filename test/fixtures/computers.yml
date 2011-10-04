@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  userName: MyString
+  description: MyText
+  browser: MyString
+  time: 1
+  userAgentString: MyString
+
+two:
+  userName: MyString
+  description: MyText
+  browser: MyString
+  time: 1
+  userAgentString: MyString

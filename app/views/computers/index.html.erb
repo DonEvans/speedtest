@@ -1,0 +1,9 @@
+<h2>List of speed test results</h2>
+
+<ul>
+	<% for computers in @computer  %>
+		<li><%= computers.userName %>, running <%= computers.browser%> on a <%= computers.category %>, needed <%= computers.time%>&nbsp ms.
+				<%= link_to "show", :action => 'show', :id => computers %>
+</li>
+	<% end %>
+</ul>

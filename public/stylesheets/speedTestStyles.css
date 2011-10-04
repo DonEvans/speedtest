@@ -1,0 +1,79 @@
+/*Styles for speedTest site */
+
+body {
+	font-family: Constantia, Georgia, "Times New Roman", serif; 
+  font-size: 62.5%; 
+  color: #1a1a1a; 
+  background-color: #AAA; 
+  margin: 0px; 
+  padding: 0px;
+}
+
+/* Original width was 911 px   */
+#container { 
+	width: 1020px; margin: 0px auto; font-size: 1.5em;
+}
+
+#header {
+	height: 70px;
+	background-color: #D9D9D8;
+	position:relative;
+}
+
+h1, h2, h3 { 
+margin:  .4em 0 .25em 0; 
+font-family:  Calibri, Helvetica, Arial, sans-serif; 
+/*text-transform:  capitalize; */
+letter-spacing:  -.05em; 
+} 
+/* Specific stylesfor h1 and h2 */ 
+h1 { 
+font-size:  3em; text-align: center;
+font-family:  Comic Sans MS, Calibri, Helvetica, Arial, sans-serif; 
+} 
+
+h2 { font-size:  1.3em; color:  #666; }
+
+#nav {
+	margin: 0; padding: 0; background-color: #69C; list-style-type:none; 
+	float: left; width: 100%;
+}
+
+#nav li {
+margin: 0; padding: 0; float: left;
+font-family: Consolas, Calibri, Helvetica, Arial, sans-serif
+}
+
+#nav a {
+	float:left; width: 181px; color: #000; text-decoration: none; 
+  line-height: 2.5; text-align: center; border-right: 1px solid #000;
+}
+
+#nav a:hover {background-color: #FF9; color: #000;}
+
+#main { padding: 1em; background-color: #E6E6D8;}
+
+#footer {
+	height: 20px;
+	background-color: #D9D9D8;
+	margin: 0px;
+	padding: 15px 15px 15px 25px;
+}
+
+code {
+	font-family: Consolas, Verdana, sans-serif;
+}
+
+#codeContainer1 {
+	margin: 0; padding: 2px; list-style-type:none; 
+	float: left; width: 100%;
+}
+
+#codeContainer li {
+margin: 0; padding: 0; float: left;
+font-family: Consolas, Calibri, Helvetica, Arial, sans-serif
+}
+
+#lefty {float: left;}
+#righty {float: right;}
+#php {float: left}

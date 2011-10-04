@@ -1,0 +1,60 @@
+
+<br><br>
+<h2>Test complete!</h2>
+
+<p><%= javascript_include_tag "speedtest" %>
+</p>
+
+
+
+<br><br>
+
+<%= form_for(@computer) do |f| %>
+	<p>
+		<%= f.label :userName, "Your name (required)" %><br>
+		<%= f.text_field :userName %>
+	</p>
+
+	<p>
+		<%= f.label :browser, "Browser name" %><br>
+		<%= f.select( :browser, options_for_select([
+["Other", "Unknown browser"], ["Internet Explorer 9", "Internet Explorer 9"], ["Internet Explorer 8", "Internet Explorer 8"], ["Internet Explorer 7","Internet Explorer 7"], ["Internet Explorer 6", "Internet Explorer 6"], ["Firefox 3.x", "Firefox 3.x"], ["Firefox 4 or higher", "Firefox 4 or higher"], ["Chrome", "Chrome"], ["Safari", "Safari"], ["Opera", "Opera"]
+]))%>
+	</p>
+
+	<p>
+		<%= f.label :category, "Machine type" %><br>
+		<%= f.select( :category, options_for_select([
+["Desktop", "Desktop"], ["Laptop", "Laptop"], ["Tablet", "Tablet"], ["Phone", "Phone"], ["Ipod", "Ipod"], ["Other", "Other"]
+]))%>
+	</p>
+
+	<p>
+		<%= f.label :description, "Machine description (126 characters max)"%><br>
+		<%= f.text_area :description %>
+	</p>
+  
+	<%= f.hidden_field :time %>
+	<%= f.hidden_field :userAgentString %>
+<!--	<input type="hidden" name="time" value="9999">
+	<input type="hidden" name="userAgentString" value="none">
+-->
+	<p>
+		<%= f.submit "Submit" %>
+	</p>
+
+<% end %>
+
+<script type="text/javascript">
+	//Sets hidden fields
+	var field1 = document.forms[0].computers_userAgentString;
+	field1.value = navigator.userAgent;
+	var field2 = document.forms[0].computers_time;
+	field2.value = this.elapsedTime;
+</script>
+
+
+
+	
+
+

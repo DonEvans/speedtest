@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Speed test for your computer</title>
+<%= stylesheet_link_tag "speedTestStyles.css" %>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header">
+<h1>Test the speed of your computer!</h1>
+</div>
+
+<div id = "nav">
+<ul id="nav">
+<li><a href="/page/index">Home</a></li>
+<li><a href="/computers/new">Test Speed</a></li>
+<li><a href="/computers">Results</a></li>
+<li><a href="/page/languages">Languages Compared</a></li>
+<li> <a href="/page/browsers">Browsers Compared</a></li>
+</ul>
+</div>
+
+<div id = "main">
+
+<%= yield %>
+
+</div>
+
+<div id ="footer">
+
+</div>
+
+</div>
+</body>
+</html>

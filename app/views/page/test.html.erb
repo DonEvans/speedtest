@@ -1,0 +1,29 @@
+
+<br><br>
+<h2>Test complete!</h2>
+
+<p><%= javascript_include_tag "speedtest" %>
+</p>
+<br><br>
+<% form_for @computer do |f| %>
+	<p>
+		<%= f.label :userName, "Your name" %>
+		<%= f.text_field :username %>
+	</p>
+
+	<p>
+		<%= f.label :browser, "Browser name"%>
+		<%= f.select :browser, %w(Internet_Explorer_9 Internet_Explorer_8 Internet_Explorer_7 Internet_Explorer_6 Firefox_3 Firefox_4 Chrome Safari Opera Other)%>
+	</p>
+
+	<p>
+		<%= f.label :description, "Machine description"%>
+		<%= f.text_area :description %>
+	</p>
+  
+	<p>
+		<%= f.submit "Submit" %>
+	</p>
+
+<% end %>
+
