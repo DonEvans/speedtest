@@ -27,7 +27,7 @@
 <h2>Code Listings</h2>
 <div id="codeContainer1">
 <div id="lefty">
-<h2>Java (85 lines, 1674 characters)</h2>
+<h2>Java (81 lines, 1498 characters)</h2>
 <br>
 <pre>
 <code>
@@ -67,13 +67,8 @@ public class ComputerSpeedTest {
     finishTime = finishDate.getTime();
     elapsedTime = finishTime - startTime;
 		
-    System.out.println((list.size()+ 2) + " primes less than " +  PRIMES_LESS_THAN);  
-    //Add 2 to list size to get correct number of primes to allow for 2 and 5.
-    int lastPrimeIndex = list.size()-1; 
-    System.out.print(" " + list.get(lastPrimeIndex));
-    System.out.print(" " + list.get(lastPrimeIndex - 1));
-    System.out.println(" " + list.get(lastPrimeIndex - 2));
-		
+    System.out.println((list.size()+ 1) + " primes less than " +  PRIMES_LESS_THAN);  
+    //Add 1 to list size to get correct number of primes to allow for 2 and 5.
     System.out.println("Time to complete = " + elapsedTime + " milliseconds.");
   }
 		
@@ -122,7 +117,7 @@ public class ComputerSpeedTest {
 </div>
 
 <div>
-<h2>Javascript (59 lines, 1143 characters)</h2>
+<h2>Javascript (61 lines, 1194 characters)</h2>
 <br>
 <pre>
 <code>
@@ -153,8 +148,9 @@ public class ComputerSpeedTest {
   var finishDate = new Date();
   finishTime = finishDate.getTime();
   elapsedTime = finishTime - startTime;
-//Output
-  document.write((list.length + 2) + " primes less than " + PRIMES_LESS_THAN + "...");
+
+  document.write((list.length + 1) + " primes less than " + PRIMES_LESS_THAN + "...");
+//Add 1 to list size to get correct number of primes to allow for 2 and 5.
   var lastPrimeIndex = list.length - 1;
   document.write(" Time to complete = " + elapsedTime + " milliseconds.");
 	
@@ -194,7 +190,7 @@ function primeFinder(decade) {
 
 
 <div id="php">
-<h2>PHP (51 lines, 937 characters)</h2>
+<h2>PHP (52 lines, 982 characters)</h2>
 <pre>
 <code>
 //Computer speed test in PHP
@@ -218,8 +214,8 @@ while ($counter > 0) {
 $finishTime = time();
 $elapsedTime = $finishTime - $startTime;
 
-//Output
-echo (list.sizeof() + 2)." primes less than ".PRIMES_LESS_THAN."<br>";
+echo (list.sizeof() + 1)." primes less than ".PRIMES_LESS_THAN."<br>";
+//Add 1 to list size to get correct number of primes to allow for 2 and 5.
 echo "Time to complete = ".$elapsedTime." milliseconds.";
 
 function primeFinder($decade) {
@@ -254,7 +250,7 @@ function primeFinder($decade) {
 </div>
 
 <div>
-<h2>Ruby (47 lines, 757 characters)</h2>
+<h2>Ruby (48 lines, 844 characters)</h2>
 <pre>
 <code>
 # Computer speed test in Ruby
@@ -272,7 +268,7 @@ function primeFinder($decade) {
 		candidates << d*10 + 9
 			
 		#Test each candidate against known primes excluding 2 and 5.
-		for candidate in candidates
+		candidates.each { |candidate|
 			listSize = $list.length
 			index = 0
 				
@@ -286,7 +282,7 @@ function primeFinder($decade) {
 				index += 1
 				listSize -= 1
 			end
-		end
+		}
 	end
 	
 	startTime = Time.now     #Record start time
@@ -302,9 +298,9 @@ function primeFinder($decade) {
 	#Record finish time and elapsed time.
 	elapsedTime = Time.now - startTime 
 		
-	#Add 2 to list size to get correct number of primes to allow for 2 and 5.
-	puts ($list.length + 2)
-	puts elapsedTime*1000
+	#Add 1 to list size to get correct number of primes to allow for 2 and 5.
+puts ($list.length + 1).to_s + ' primes less than ' +primes_less_than.to_s
+puts "Time to complete = " + (elapsedTime*1000).to_s + " milliseconds."
 </code>
 </pre>
 <br><br><br>
