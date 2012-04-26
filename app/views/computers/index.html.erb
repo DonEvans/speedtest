@@ -1,9 +1,62 @@
-<h2>List of speed test results</h2>
 
-<ul>
-	<% for computers in @computer  %>
-		<li><%= computers.userName %>, running <%= computers.browser%> on a <%= computers.category %>, needed <%= computers.time%>&nbsp ms.
-				<%= link_to "show", :action => 'show', :id => computers %>
-</li>
+<% @computer.sort! { |a,b| a.time <=> b.time } %>
+
+<h3>Systems Tested</h3>
+
+<p> <%= (@computer.first).userName %> submitted the fastest system, a <%= (@computer.first).category %>, which needed <%=  (@computer.first).time %> ms. <br>
+<%= (@computer.last).userName %> submitted the slowest system, a <%= (@computer.last).category %>, which needed <%=  (@computer.last).time %> ms.
+</p>
+
+<h4>Desktops</h4>
+<table>
+	<tr>
+		<td>Time in milliseconds &nbsp |</td> <td> Browser |</td> <td>Machine Description</td>
+	</tr>
+<% for computers in @computer %>
+	<% if computers.category == "Desktop" %>
+		<%= render computers %>
 	<% end %>
-</ul>
+<% end %>
+</table>
+
+<h4>Laptops</h4>
+<table>
+	<tr>
+		<td>Time in milliseconds &nbsp |</td><td>Browser |</td> <td>Machine Description</td>
+	</tr>
+<% for computers in @computer %>
+	<% if computers.category == "Laptop" %>
+		<%= render computers %>
+	<% end %>
+<% end %>
+</table>
+
+<h4>Tablets, Phones and Ipods</h4>
+<table>
+	<tr>
+		<td>Time in milliseconds &nbsp |</td> <td>Browser |</td>
+<td>Machine Description</td>
+	</tr>
+<% for computers in @computer %>
+	<% if (computers.category == "Tablet")  %>
+		<%= render computers %>
+	<% elsif (computers.category == "Phone") %>
+		<%= render computers %>
+	<% elsif (computers.category == "Ipod") %>
+		<%=  render computers %>
+	<% end %>
+<% end %>
+</table>
+
+<h4>Other</h4>
+<table>
+	<tr>
+		<td>Time in milliseconds &nbsp |</td> <td>Browser |</td>
+<td>Machine Description</td>
+	</tr>
+<% for computers in @computer %>
+	<% if computers.category == "Other" %>
+		<%= render computers %>
+	<% end %>
+<% end %>
+</table>

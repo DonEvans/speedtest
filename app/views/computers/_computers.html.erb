@@ -1,0 +1,17 @@
+	<tr>
+		<td>
+			<div style="background-color: #69C; width:<%=
+			(computers.time / 10)  %>px; max-width: 400px;">
+			<%= computers.time %>
+			</div>
+		</td>
+		<td>
+			<%= computers.browser %>
+		</td>
+		<td>
+			<%=  computers.description %>
+		</td>
+		<td>
+			<%= link_to "show", :action => 'show', :id => computers %>
+		</td>
+	</tr>

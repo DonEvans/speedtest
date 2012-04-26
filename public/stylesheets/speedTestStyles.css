@@ -77,3 +77,10 @@ font-family: Consolas, Calibri, Helvetica, Arial, sans-serif
 #lefty {float: left;}
 #righty {float: right;}
 #php {float: left}
+
+/*Styles for form */
+textarea {
+	width: 22em;
+	height: 4em;
+	overflow: hidden;
+}
