@@ -11,7 +11,6 @@
   //Start prime finding algorithm
   list.push(3);
   list.push(7);
-  list.push(9);
   var decade = 1;
   var counter = (PRIMES_LESS_THAN/10) -1;
 	
@@ -26,9 +25,9 @@
   finishTime = finishDate.getTime();
   elapsedTime = finishTime - startTime;
 
-//Add 1 to list size to get correct number of primes to allow for 2 and 5.
+//Add 2 to list size to get correct number of primes to allow for 2 and 5.
   var lastPrimeIndex = list.length - 1;
-  document.write("Your computer took " + elapsedTime + " milliseconds to find all " + (list.length + 1) + " primes less than " + PRIMES_LESS_THAN + ".");
+  document.write("Your computer took " + elapsedTime + " milliseconds to find all " + (list.length + 2) + " primes less than " + PRIMES_LESS_THAN + ".");
 	
 function primeFinder(decade) {
 

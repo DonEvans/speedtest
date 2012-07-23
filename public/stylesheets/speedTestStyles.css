@@ -1,4 +1,4 @@
-/*Styles for speedTest site */
+/* Styles for speedTest site */
 
 body {
 	font-family: Constantia, Georgia, "Times New Roman", serif; 
@@ -60,23 +60,31 @@ font-family: Consolas, Calibri, Helvetica, Arial, sans-serif
 	padding: 15px 15px 15px 25px;
 }
 
+/*Styles for Languages Compared page*/
 code {
 	font-family: Consolas, Verdana, sans-serif;
 }
 
 #codeContainer1 {
-	margin: 0; padding: 2px; list-style-type:none; 
-	float: left; width: 100%;
+	margin: 0; 
+	padding: 2px; 
+	list-style-type:none; 
+	float: left; 
+	width: 100%;
+	background-color: #E6E6D8;
 }
 
-#codeContainer li {
-margin: 0; padding: 0; float: left;
-font-family: Consolas, Calibri, Helvetica, Arial, sans-serif
+div.lefty {
+	float: left;
+	display: inline;
+	
 }
 
-#lefty {float: left;}
-#righty {float: right;}
-#php {float: left}
+div.righty {
+	float: right;
+	display: inline;
+	
+	}
 
 /*Styles for form */
 textarea {

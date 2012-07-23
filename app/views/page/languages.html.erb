@@ -1,5 +1,6 @@
 <h2>One algorithm. Four different languages.</h2>
 <br>
+<p>I implemented the same algorithm in 4 different languages, to check the runtime and expressiveness of each language. This is actually a very inefficient algorithm for finding primes, but it works just fine for comparing the speed of hardware and languages.</p>
 <img src="/images/languageSpeedComparison.jpg" alt="Bar chart">
 
 <h2>Java</h2>
@@ -26,7 +27,7 @@
 
 <h2>Code Listings</h2>
 <div id="codeContainer1">
-<div id="lefty">
+<div class="lefty">
 <h2>Java (81 lines, 1498 characters)</h2>
 <br>
 <pre>
@@ -36,7 +37,7 @@ import java.util.*;
 public class ComputerSpeedTest {
 
   private ArrayList<Integer> list = new ArrayList<Integer>();
-  public static final int PRIMES_LESS_THAN = 50000;
+  public static final int PRIMES_LESS_THAN = 20000;
   private long startTime, finishTime, elapsedTime;
 	
   public static void main(String[] args) {
@@ -52,7 +53,6 @@ public class ComputerSpeedTest {
     //Start prime finding algorithm
     list.add(3);
     list.add(7);
-    list.add(9);
     int decade = 1;
     int counter = (PRIMES_LESS_THAN/10) -1;
 		
@@ -67,7 +67,7 @@ public class ComputerSpeedTest {
     finishTime = finishDate.getTime();
     elapsedTime = finishTime - startTime;
 		
-    System.out.println((list.size()+ 1) + " primes less than " +  PRIMES_LESS_THAN);  
+    System.out.println((list.size()+ 2) + " primes less than " +  PRIMES_LESS_THAN);  
     //Add 1 to list size to get correct number of primes to allow for 2 and 5.
     System.out.println("Time to complete = " + elapsedTime + " milliseconds.");
   }
@@ -116,7 +116,7 @@ public class ComputerSpeedTest {
 </pre>
 </div>
 
-<div>
+<div class="righty">
 <h2>Javascript (61 lines, 1194 characters)</h2>
 <br>
 <pre>
@@ -124,7 +124,7 @@ public class ComputerSpeedTest {
 //Computer speed test in Javascript
 
   var list = new Array();
-  var PRIMES_LESS_THAN = 50000;
+  var PRIMES_LESS_THAN = 20000;
   var startTime, finishTime, elapsedTime;
 
   //Record start time
@@ -134,7 +134,6 @@ public class ComputerSpeedTest {
   //Start prime finding algorithm
   list.push(3);
   list.push(7);
-  list.push(9);
   var decade = 1;
   var counter = (PRIMES_LESS_THAN/10) -1;
 	
@@ -149,8 +148,8 @@ public class ComputerSpeedTest {
   finishTime = finishDate.getTime();
   elapsedTime = finishTime - startTime;
 
-  document.write((list.length + 1) + " primes less than " + PRIMES_LESS_THAN + "...");
-//Add 1 to list size to get correct number of primes to allow for 2 and 5.
+  document.write((list.length + 2) + " primes less than " + PRIMES_LESS_THAN + "...");
+//Add 2 to list size to get correct number of primes to allow for 2 and 5.
   var lastPrimeIndex = list.length - 1;
   document.write(" Time to complete = " + elapsedTime + " milliseconds.");
 	
@@ -189,18 +188,19 @@ function primeFinder(decade) {
 </div>
 
 
-<div id="php">
+<div id="codeContainer1">
+<div class="lefty">
 <h2>PHP (52 lines, 982 characters)</h2>
 <pre>
 <code>
 //Computer speed test in PHP
-define("PRIMES_LESS_THAN",  50000);
+define("PRIMES_LESS_THAN",  20000);
 
 //Record start time
 $startTime = time();
 
 //Start prime finding algorithm
-$list = array(3,7,9);
+$list = array(3,7);
 $decade = 1;
 $counter = (PRIMES_LESS_THAN/10) -1;
 
@@ -214,8 +214,8 @@ while ($counter > 0) {
 $finishTime = time();
 $elapsedTime = $finishTime - $startTime;
 
-echo (list.sizeof() + 1)." primes less than ".PRIMES_LESS_THAN."<br>";
-//Add 1 to list size to get correct number of primes to allow for 2 and 5.
+echo (list.sizeof() + 2)." primes less than ".PRIMES_LESS_THAN."<br>";
+//Add 2 to list size to get correct number of primes to allow for 2 and 5.
 echo "Time to complete = ".$elapsedTime." milliseconds.";
 
 function primeFinder($decade) {
@@ -249,13 +249,13 @@ function primeFinder($decade) {
 </pre>
 </div>
 
-<div>
+<div class="righty">
 <h2>Ruby (48 lines, 844 characters)</h2>
 <pre>
 <code>
 # Computer speed test in Ruby
-	$list = [3,7,9]
-	primes_less_than = 50000
+	$list = [3,7]
+	primes_less_than = 20000
 	decade = 1
 
 	def primeFinder(d)
@@ -298,12 +298,12 @@ function primeFinder($decade) {
 	#Record finish time and elapsed time.
 	elapsedTime = Time.now - startTime 
 		
-	#Add 1 to list size to get correct number of primes to allow for 2 and 5.
-puts ($list.length + 1).to_s + ' primes less than ' +primes_less_than.to_s
+	#Add 2 to list size to get correct number of primes to allow for 2 and 5.
+puts ($list.length + 2).to_s + ' primes less than ' +primes_less_than.to_s
 puts "Time to complete = " + (elapsedTime*1000).to_s + " milliseconds."
 </code>
 </pre>
 <br><br><br>
 </div>
-
+</div>
 
