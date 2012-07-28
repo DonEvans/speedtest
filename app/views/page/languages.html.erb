@@ -67,7 +67,7 @@ public class ComputerSpeedTest {
     finishTime = finishDate.getTime();
     elapsedTime = finishTime - startTime;
 		
- System.out.println((list.size()+ 2) + " primes less than " +  PRIMES_LESS_THAN);  
+ System.out.println((list.size()+ 2)+" primes less than "+ PRIMES_LESS_THAN);  
  //Add 1 to list size to get correct number of primes to allow for 2 and 5.
  System.out.println("Time to complete = " + elapsedTime + " milliseconds.");
   }
@@ -233,7 +233,7 @@ function primeFinder($decade) {
 		$listSize = $list.sizeof();
 		$index = 0;
 		
-		while ($listSize &gt 0) {
+		while ($listSize &gt; 0) {
 			$prime = $list[$index];
 			if ($candidate%$prime == 0) {
 				break;
