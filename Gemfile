@@ -11,10 +11,17 @@ gem 'rails', '3.0.9'
 group :production do
   gem 'pg'
 end
+
 group :development, :test do
   gem 'sqlite3'
+	gem 'rspec-rails', '2.6.1'
 end
 #End Heroku hack
+
+group :test do
+	gem 'webrat', '0.7.1'
+	gem 'factory_girl_rails', '1.0'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
